@@ -1,0 +1,46 @@
+
+{% extends "base.html" %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="text-4xl font-bold text-gray-900 mb-8">Welcome to AiMetaVerse</h1>
+    <p class="text-xl text-gray-600 mb-12">Experience the future of secure payments with facial recognition technology</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <i class="fas fa-shield-alt text-4xl text-indigo-600 mb-4"></i>
+            <h2 class="text-xl font-semibold text-gray-900 mb-2">Secure Authentication</h2>
+            <p class="text-gray-600">Advanced facial recognition ensures your transactions are protected</p>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <i class="fas fa-bolt text-4xl text-indigo-600 mb-4"></i>
+            <h2 class="text-xl font-semibold text-gray-900 mb-2">Fast Transactions</h2>
+            <p class="text-gray-600">Complete payments in seconds with just your face</p>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <i class="fas fa-lock text-4xl text-indigo-600 mb-4"></i>
+            <h2 class="text-xl font-semibold text-gray-900 mb-2">Privacy First</h2>
+            <p class="text-gray-600">Your biometric data is encrypted and securely stored</p>
+        </div>
+    </div>
+    
+    <div class="mt-12">
+        {% if not session.get('user_id') %}
+            <a href="{{ url_for('register') }}" class="inline-block bg-indigo-600 text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-indigo-700 mr-4">
+                Get Started
+            </a>
+            <a href="{{ url_for('login') }}" class="inline-block bg-gray-200 text-gray-700 px-8 py-3 rounded-md text-lg font-medium hover:bg-gray-300">
+                Sign In
+            </a>
+        {% else %}
+            <a href="{{ url_for('dashboard') }}" class="inline-block bg-indigo-600 text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-indigo-700">
+                Go to Dashboard
+            </a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

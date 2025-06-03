@@ -1,0 +1,3 @@
+Traceback (most recent call last):
+  File "<string>", line 3, in <module>
+ImportError: cannot import name 'app' from 'app' (/home/user/FacePrintPay/AiMeta/app.py)

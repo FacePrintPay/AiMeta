@@ -1,0 +1,16 @@
+
+{% extends "base.html" %}
+
+{% block title %}Page Not Found{% endblock %}
+
+{% block content %}
+<div class="min-h-[60vh] flex items-center justify-center">
+    <div class="text-center">
+        <h1 class="text-6xl font-bold text-indigo-600 mb-4">404</h1>
+        <p class="text-xl text-gray-600 mb-8">Page not found</p>
+        <a href="{{ url_for('index') }}" class="inline-block bg-indigo-600 text-white px-6 py-2 rounded-md text-lg font-medium hover:bg-indigo-700">
+            Go Home
+        </a>
+    </div>
+</div>
+{% endblock %}
