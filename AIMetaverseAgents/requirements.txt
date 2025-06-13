@@ -1,0 +1,30 @@
+# AI and Machine Learning
+openai==0.27.6
+transformers==4.30.2
+torch==2.0.1
+numpy==1.24.3
+pandas==1.5.3
+scikit-learn==1.2.2
+
+# Natural Language Processing
+nltk==3.8.1
+spacy==3.5.3
+
+# Web Framework and API
+fastapi==0.95.2
+uvicorn==0.22.0
+pydantic==1.10.8
+
+# Database and Storage
+pymongo==4.3.3
+redis==4.5.5
+
+# Utilities
+python-dotenv==1.0.0
+requests==2.31.0
+asyncio==3.4.3
+websockets==11.0.3
+
+# Testing
+pytest==7.3.1
+pytest-asyncio==0.21.0
