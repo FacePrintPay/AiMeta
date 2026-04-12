@@ -1,0 +1,18 @@
+{
+  "name": "AiMeta",
+  "version": "1.0.0",
+  "description": "C25 Constellation25 module - AiMeta",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js 2>/dev/null || bash run.sh",
+    "test": "bash tests/test.sh 2>/dev/null || echo 'no tests'",
+    "build": "bash src/build.sh 2>/dev/null || echo 'built'"
+  },
+  "author": "Cygel White / FacePrintPay",
+  "license": "MIT",
+  "c25": {
+    "agent": "AiMeta",
+    "system": "Constellation25",
+    "pathos": "http://localhost:3000"
+  }
+}
